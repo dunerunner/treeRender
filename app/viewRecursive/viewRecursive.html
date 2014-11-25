@@ -1,0 +1,7 @@
+<section id="recursive" class="b-column">
+    <h1 class="b-column__header">Recursive solution</h1>
+    <button class="b-button b-button_withmargin" ng-click="addChildNode()">Add Root Node</button>
+    <ul class="b-node-list">
+        <li class="b-node-list__node" ng-repeat="data in tree" ng-include="'partials/partialRecursive.html'"></li>
+    </ul>
+</section>
