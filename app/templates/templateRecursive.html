@@ -1,0 +1,13 @@
+<ul class="b-node-list" >
+    <li class="b-node-list__node" ng-repeat="node in nodes">
+        <div class="b-node">
+            <div class="b-node__title">{{node.name}}</div>
+            <div class="b-node__controls">
+                <button class="b-button" ng-click="addChildNode(node)">Add Child node</button>
+                <button class="b-button" ng-click="editNode(node)">Edit Node</button>
+                <button class="b-button" ng-click="deleteNode(node)">Delete Node</button>
+            </div>
+        </div>
+        <recursive-tree root-tree="rootTree" parent="node" nodes="node.childNodes"></recursive-tree>
+    </li>
+</ul>
