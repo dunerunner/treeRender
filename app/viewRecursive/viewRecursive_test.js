@@ -1,16 +1,21 @@
 'use strict';
 
-describe('myApp.view2 module', function() {
+describe('treeRenderApp.viewRecursive module', function () {
 
-  beforeEach(module('myApp.view2'));
+    beforeEach(module('treeRenderApp.viewRecursive'));
+    beforeEach(module('treeRenderApp.storage'));
 
-  describe('view2 controller', function(){
+    describe('viewRecursive controller', function () {
+        var RecursiveCrtl, scope;
+        beforeEach(angular.mock.inject(function ($controller, $rootScope) {
+            scope = $rootScope.$new();
+            RecursiveCrtl = $controller('RecursiveCtrl', {
+                $scope: scope
+            });
+        }));
+        it('should be defined', inject(function () {
+            expect(RecursiveCrtl).toBeDefined();
+        }));
 
-    it('should ....', inject(function($controller) {
-      //spec body
-      var view2Ctrl = $controller('View2Ctrl');
-      expect(view2Ctrl).toBeDefined();
-    }));
-
-  });
+    });
 });

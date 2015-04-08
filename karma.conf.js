@@ -8,7 +8,7 @@ module.exports = function(config){
       'app/bower_components/angular-route/angular-route.js',
       'app/bower_components/angular-mocks/angular-mocks.js',
       'app/components/**/*.js',
-      'app/view*/**/*.js'
+      'app/view*/*.js'
     ],
 
     autoWatch : true,
@@ -27,7 +27,9 @@ module.exports = function(config){
     junitReporter : {
       outputFile: 'test_out/unit.xml',
       suite: 'unit'
-    }
-
+    },
+    port:9000,
+    singleRun: false,
+    colors:true
   });
 };

@@ -22,8 +22,6 @@ angular.module('treeRenderApp.viewIterative', ['ngRoute'])
                             var nodeToAdd = '<iterative-node root-tree="tree" node="' + nodeID + '"></iterative-node>';
                             var el = angular.element($compile(nodeToAdd)($scope));
                             if (currentElement.parentId) {
-                                console.log('c' + currentElement.parentId);
-                                console.log(document.getElementById('c' + currentElement.parentId));
                                 document.getElementById('c' + currentElement.parentId).appendChild(el[0]);
                             } else {
                                 nodeContainer.appendChild(el[0]);
